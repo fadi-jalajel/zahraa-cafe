@@ -1,4 +1,5 @@
 import { ImageBackground } from "expo-image";
+import { router } from "expo-router";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const imgURI =
@@ -12,7 +13,10 @@ export default function HomeScreen() {
       style={styles.background}
     >
       <View style={styles.overlay} />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => router.navigate("/navpoint")}
+      >
         <Text style={styles.buttonText}>Browse our special coffee ☕️</Text>
       </TouchableOpacity>
     </ImageBackground>
